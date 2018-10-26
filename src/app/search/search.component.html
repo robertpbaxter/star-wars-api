@@ -1,0 +1,18 @@
+<div>
+  <label> Search within
+    <select #api>
+      <option value="people">people</option>
+      <option value="planets">planets</option>
+      <option value="starships">starships</option>
+    </select>
+    <input #searchTerm>
+    <button (click)='search(api.value,searchTerm.value)'>Search</button>
+  </label>
+  <hr />
+  <h1>Results</h1>
+  <ul class='results'>
+    <li *ngFor='let result of results'>
+      <app-detail [result]='result'></app-detail>
+    </li>
+  </ul>
+</div>

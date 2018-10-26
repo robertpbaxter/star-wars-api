@@ -10,7 +10,7 @@ import { catchError } from "rxjs/operators";
 export class SearchService {
   constructor(private http: HttpClient) {}
 
-  private baseUrl = "https://swapi.co/api/";
+  private baseUrl = "https://swapi.co/api";
 
   private handleError<T>(operation = "operation", result?: T) {
     return (error: any): Observable<T> => {
