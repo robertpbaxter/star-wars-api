@@ -9,7 +9,6 @@ import { SearchService } from "../search.service";
 })
 export class SearchComponent implements OnInit {
   results: Result[];
-  displayResults: string;
 
   constructor(private searchService: SearchService) {}
 
@@ -18,8 +17,6 @@ export class SearchComponent implements OnInit {
   search(api: string, term: string): void {
     this.searchService.search(api, term).subscribe(data => {
       this.results = data.results;
-      this.displayResults = JSON.stringify(this.results);
-      console.log(this.displayResults);
     });
   }
 }

@@ -22,7 +22,7 @@ export class SearchService {
     };
   }
 
-  search(api: string, term: string): Observable<Result[]> {
+  search(api: string, term: string): Observable<any> {
     if (!term.trim()) {
       //if not search term, return empty hero array
       return of([]);

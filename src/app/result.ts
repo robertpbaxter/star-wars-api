@@ -1,3 +1,3 @@
 export class Result {
-  results: any;
+  result: any;
 }
